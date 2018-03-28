@@ -1,43 +1,51 @@
 
 
-Rede A
-    ip:     192.168.0.0/23
-    mask:   255.255.254.0
-    primeiro endereço:  192.168.0.0
-    ultimo endereço:    192.168.1.255
-    broadCast:          192.168.1.255
-    total hosts:        512
+Especificação das Redes:
+    Rede A
+        ip:     192.168.0.0/23
+        mask:   255.255.254.0
+        primeiro endereço:  192.168.0.0
+        ultimo endereço:    192.168.1.255
+        broadCast:          192.168.1.255
+        total hosts:        512
 
 
-Rede B
-    ip:     192.169.0.0/20    
-    mask:   255.255.240.0
-    primeiro endereço:  192.169.0.0
-    ultimo endereço:    192.169.15.255
-    broadCast:          192.169.15.255
-    total hosts:        4096
+    Rede B
+        ip:     192.169.0.0/20    
+        mask:   255.255.240.0
+        primeiro endereço:  192.169.0.0
+        ultimo endereço:    192.169.15.255
+        broadCast:          192.169.15.255
+        total hosts:        4096
 
 
-Rede C
-    ip:     192.170.0.0/27
-    mask:   255.255.255.224
-    primeiro endereço:  192.170.0.0
-    ultimo endereço:    192.170.0.31
-    broadCast:          192.170.0.31
-    total hosts:        32
-
-
+    Rede C
+        ip:     192.170.0.0/27
+        mask:   255.255.255.224
+        primeiro endereço:  192.170.0.0
+        ultimo endereço:    192.170.0.31
+        broadCast:          192.170.0.31
+        total hosts:        32
 
 
 
-Equipamentos        Endereços IP        Mascara de Rede         GateWay Padrão      Endereço Dns
-        
-PC(A1)              192.168.0.2         255.255.254.0           192.168.0.1         192.170.0.2
-PC(A2)              192.168.0.3         255.255.254.0           192.168.0.1         192.170.0.2
-PC(B1)              192.169.0.2         255.255.240.0           192.169.0.1         192.170.0.2
-DNS(C1)             192.170.0.2         255.255.255.224         192.170.0.1            -----
-HTTP(C1)            192.170.0.3         255.255.255.224         192.170.0.1         192.170.0.2
-Router(Gig0/0)      192.168.0.1         255.255.254.0              -----               ----- 
-Router(Gig1/0)      192.169.0.1         255.255.240.0              -----               -----
-Router(Gig2/0)      192.170.0.1         255.255.255.224            -----               -----
+Tabela de Configuração dos Equipamentos:
+    Equipamentos        Endereços IP        Mascara de Rede         GateWay Padrão      Endereço Dns
+
+    PC(A1)              192.168.0.2         255.255.254.0           192.168.0.1         192.170.0.2
+    PC(A2)              192.168.0.3         255.255.254.0           192.168.0.1         192.170.0.2
+    PC(B1)              192.169.0.2         255.255.240.0           192.169.0.1         192.170.0.2
+    DNS(C1)             192.170.0.2         255.255.255.224         192.170.0.1            -----
+    HTTP(C1)            192.170.0.3         255.255.255.224         192.170.0.1         192.170.0.2
+    Router(Gig0/0)      192.168.0.1         255.255.254.0              -----               ----- 
+    Router(Gig1/0)      192.169.0.1         255.255.240.0              -----               -----
+    Router(Gig2/0)      192.170.0.1         255.255.255.224            -----               -----
+
+
+
+Comandos Cisco:
+    enable				        #modo root
+    interface <nome_interface> 	#configurar interface
+    ip adress <ip> <mask>		#configrar ip e mascara de rede
+    no shutdown			        #ligar a interface 
 
